@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Prototype : autolayout layout inspired by Figma"
+    />
+    <title>Label — Autolayout demo</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#" aria-label="Label Home">Label</a>
+        <nav class="main-nav" aria-label="Navigation principale">
+          <ul>
+            <li><a href="#features">Fonctionnalités</a></li>
+            <li><a href="#how">Comment</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero (autolayout-like center stack) -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Créer des mises en page flexibles avec Auto Layout
+            </h1>
+            <p class="hero-subtitle">
+              Une base responsive inspirée de la page Autolayout sur Figma —
+              composants empilés, espacement cohérent et alignement adaptatif.
+            </p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary" href="#features">Commencer</a>
+              <a class="btn" href="#how">En savoir plus</a>
+            </div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <!-- placeholder pour un visuel/design provenant de Figma -->
+            <div class="device-mockup">
+              <div class="screen">Visuel</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features (autolayout: horizontal flow that wraps) -->
+      <section id="features" class="features">
+        <div class="container">
+          <h2 class="section-title">Fonctionnalités</h2>
+          <div class="features-grid">
+            <article class="card">
+              <h3>Composants empilés</h3>
+              <p>
+                Organisez les composants verticalement avec des espacements
+                constants.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Adaptatif</h3>
+              <p>
+                Les éléments passent en colonne, ligne ou grille selon la
+                largeur.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Contrôles rapides</h3>
+              <p>
+                Réutilisez des tokens d'espacement et des variations de layout.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="how" class="how">
+        <div class="container">
+          <h2 class="section-title">Comment ça marche</h2>
+          <ol class="how-list">
+            <li>Décidez de la direction: vertical ou horizontal.</li>
+            <li>Définissez l'alignement et les gaps (espacements).</li>
+            <li>Utilisez des breakpoints pour l'adaptation responsive.</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-inner">
+        <nav aria-label="Liens de pied de page">
+          <ul>
+            <li><a href="#">Send us feedback</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">How we use your data</a></li>
+            <li><a href="#">Do not sell my personal information</a></li>
+            <li><a href="#">Your california privacy rights</a></li>
+            <li><a href="#">Terms & conditions</a></li>
+          </ul>
+          <p>© <span id="year"></span> OVO SOUND</p>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      // Petit script d'initialisation non intrusif
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
