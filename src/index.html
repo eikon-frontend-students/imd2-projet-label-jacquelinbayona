@@ -13,15 +13,17 @@
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="#" aria-label="Label Home">Label</a>
         <nav class="main-nav" aria-label="Navigation principale">
+          <a class="logo" href="#" aria-label="Label Home">
+          <img src="img/OVO_Sound.svg" alt="Label Logo" class="logo-img" />
+        </a>
           <ul>
             <li><a href="#Artists">Artists</a></li>
             <li><a href="#Music">Music</a></li>
             <li><a href="#Shop">Shop</a></li>
-            <li><a href="#Videos">Videos</li>
+            <li><a href="#Videos">Videos</a></li> <!-- Correction ici -->
             <li><a href="#About">About</a></li>
-            <li><a href="#Suscribe">Suscribe</a></li>
+            <li><a href="#Suscribe">Subscribe</a></li> <!-- Correction de l'orthographe -->
           </ul>
         </nav>
       </div>
@@ -38,74 +40,80 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
             </iframe>
-          </div>
-      <section class="hero">
-        <div class="container hero-inner">
-          <div class="hero-content">
-            <h1 class="hero-title">
-              OVO SOUND IS A MUSIC LABEL ESTABLISHED BY AUBREY DRAKE GRAHAM AND
-              LONG-STANDING Buddies and Associates NOAH “40” SHEBIB AND OLIVER
-              EL-KHATIB.
-            </h1>
-            <p class="hero-subtitle">
-              Une base responsive inspirée de la page Autolayout sur Figma —
-              composants empilés, espacement cohérent et alignement adaptatif.
-            </p>
-            <div class="hero-ctas">
-              <a class="btn btn-primary" href="#features">Commencer</a>
-              <a class="btn" href="#how">En savoir plus</a>
-            </div>
-          </div>
-          <div class="hero-visual" aria-hidden="true">
-            <!-- placeholder pour un visuel/design provenant de Figma -->
-            <div class="device-mockup">
-              <div class="screen">Visuel</div>
-            </div>
-          </div>
-        </div>
-      </section>
+            <!-- Marquee overlay: texte en mouvement continu -->
+              <div class="marquee marquee--overlay" aria-hidden="true">
+                <div class="marquee__inner">
+                  <span class="marquee__text">partynextdoor</span>
+                  <span class="marquee__text marquee__text--clone" aria-hidden="true">partynextdoor</span>
+                  <span class="marquee__text marquee__text--clone" aria-hidden="true">partynextdoor</span>
+                  <span class="marquee__text marquee__text--clone" aria-hidden="true">partynextdoor</span>
+                </div>
+              </div>
+  <!-- Marquee placé sous la vidéo, juste avant la section des artistes -->
+  <div class="marquee marquee--below" aria-hidden="true">
+    <div class="marquee__inner">
+      <span class="marquee__text">partynextdoor</span>
+      <span class="marquee__text marquee__text--clone" aria-hidden="true">partynextdoor</span>
+      <span class="marquee__text marquee__text--clone" aria-hidden="true">partynextdoor</span>
+      <span class="marquee__text marquee__text--clone" aria-hidden="true">partynextdoor</span>
+    </div>
+  </div>
 
-      <!-- Features (autolayout: horizontal flow that wraps) -->
-      <section id="features" class="features">
-        <div class="container">
-          <h2 class="section-title">Fonctionnalités</h2>
-          <div class="features-grid">
-            <article class="card">
-              <h3>DVSN</h3>
-              <p>
-                Organisez les composants verticalement avec des espacements
-                constants.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Majid Jordan</h3>
-              <p>
-                Les éléments passent en colonne, ligne ou grille selon la
-                largeur.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Contrôles rapides</h3>
-              <p>
-                Réutilisez des tokens d'espacement et des variations de layout.
-              </p>
-            </article>
           </div>
-        </div>
-      </section>
+<section id="artists" class="artists">
+  <div class="container">
+    <h2 class="section-title">Artistes</h2>
+    <div class="artist-carousel" aria-label="Carousel artistes">
+      <article class="artist-card" data-genre="rnb">
+        <img src="img/artistes homepage/dvsn-homepage.png" alt="DVSN" />
+        <h2>DVSN</h2>
+        <p>R&B slow-jam, soulful</p>
+      </article>
 
-      <!-- How it works -->
-      <section id="how" class="how">
-        <div class="container">
-          <h2 class="section-title">Comment ça marche</h2>
-          <ol class="how-list">
-            <li>Décidez de la direction: vertical ou horizontal.</li>
-            <li>Définissez l'alignement et les gaps (espacements).</li>
-            <li>Utilisez des breakpoints pour l'adaptation responsive.</li>
-          </ol>
-        </div>
-      </section>
-    </main>
+      <article class="artist-card" data-genre="rnb">
+        <img src="img/artistes homepage/majid jordan-homepage.png" alt="Majid Jordan" />
+        <h2>Majid Jordan</h2>
+        <p>R&B / Alternative R&B / Synth-pop</p>
+      </article>
+
+      <article class="artist-card" data-genre="rnb">
+        <img src="img/artistes homepage/naomi-homepage.png" alt="Naomi Sharon" />
+        <h2>Naomi Sharon</h2>
+        <p>R&B / Soul</p>
+      </article>
+
+      <article class="artist-card" data-genre="rnb">
+        <img src="img/artistes homepage/roy-homepage.png" alt="Roy Woods" />
+        <h2>Roy Woods</h2>
+        <p>R&B / Soul</p>
+      </article>
+    </div>
+  </div>
+   <div class="About"><p>
+        OVO SOUND IS A MUSIC LABEL ESTABLISHED BY AUBREY DRAKE GRAHAM AND LONG-STANDING Buddies and Associates NOAH “40” SHEBIBAND OLIVER EL-KHATIB.
+      </p></div>
+
+<section class="hometour-wrapper">
+  <h3 class="hometour-title">Next dates</h3>
+
+  <div class="hometour-embed" data-artist="Naomi Sharon">
+    <div class="hometour-artisttitle">NAOMI SHARON</div>
+
+    <!-- placeholder / loader + button pour charger l'iframe (lazy) -->
+    <div class="bit-widget-container" aria-label="Widgets dates Naomi Sharon">
+      <div class="bit-widget-placeholder">
+        <button class="hometour-load-btn" data-src="https://widget.bandsintown.com/widget_iframe.html?affil_code=js_www.ovosound.com&app_id=js_www.ovosound.com&artist_id=15515831&artist_name=Naomi%20Sharon&came_from_code=242">
+          Charger les dates
+        </button>
+        <noscript>
+          <iframe src="https://widget.bandsintown.com/widget_iframe.html?affil_code=js_www.ovosound.com&app_id=js_www.ovosound.com&artist_id=15515831&artist_name=Naomi%20Sharon&came_from_code=242"
+                  class="bitt-widget-iframe" loading="lazy" title="Naomi Sharon tour dates"></iframe>
+        </noscript>
+      </div>
+    </div>
+  </div>
+
+  <!-- Répète .hometour-embed pour DVSN, PARTYNEXTDOOR, etc., en adaptant data-src / artist_id -->
 
     <footer id="contact" class="site-footer">
       <div class="container footer-inner">
@@ -122,7 +130,6 @@
         </nav>
       </div>
     </footer>
-
     <script>
       // Petit script d'initialisation non intrusif
       document.getElementById("year").textContent = new Date().getFullYear();

@@ -18,6 +18,11 @@ body {
   background-color: #f4f4f4;
   color: #333;
 }
+.logo {
+  width: 104px;
+  height: 91px;
+  aspect-ratio: 8/7;
+}
 .site-header {
   position: fixed;
   top: 0;
@@ -41,12 +46,26 @@ body {
   font-weight: bold;
   color: white;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
+/* taille contrôlée pour l'image du logo */
+.logo-img {
+  width: 48px; /* ajuster la valeur selon la maquette */
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+/* ...existing code... */
 .main-nav ul {
   display: flex;
   list-style: none;
   gap: 2rem;
+  height: 32px;
+  align-items: center;
+  gap: 50px;
 }
 
 .main-nav a {
@@ -77,7 +96,213 @@ body {
   border: none;
   pointer-events: none;
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+/* Marquee animé - PARTYNEXTDOOR */
+.marquee {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  transform: translateY(-50%);
+  pointer-events: none;
+  overflow: hidden;
+}
 
+.marquee--overlay {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  transform: translateY(-50%);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.marquee--below {
+  position: relative;
+  background: #1a1a1a;
+  padding: 2rem 0;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.marquee__inner {
+  display: flex;
+  gap: 2rem;
+  --marquee-duration: 18s;
+  animation: marquee-scroll var(--marquee-duration) linear infinite;
+  will-change: transform;
+}
+
+.marquee__text {
+  flex-shrink: 0;
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* respecter les préférences d'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__inner {
+    animation: none;
+  }
+}
+
+/* Mobile: ajuster la vitesse et la taille */
+@media (max-width: 700px) {
+  .marquee__inner {
+    --marquee-duration: 14s;
+  }
+  .marquee__text {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+  }
+}
+/* Carousel scroll-snap (mobile-friendly, sans JS) */
+.artist-carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1.25rem 0 2.5rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  align-items: start;
+}
+
+/* masquer la scrollbar visuelle (optionnel) */
+.artist-carousel::-webkit-scrollbar {
+  display: none;
+}
+.artist-carousel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Chaque carte s'aligne au centre lors du snap */
+.artist-card {
+  flex: 0 0 80%; /* largeur visible sur petits écrans */
+  scroll-snap-align: center;
+  background: #fff;
+  padding: 1rem;
+  min-height: 220px;
+  display: flex;
+  width: 448px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+/* image inside card */
+.artist-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* titres */
+.artist-card h3 {
+  font-size: 1.1rem;
+  margin-top: 0.25rem;
+}
+.artist-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Desktop: montrer plusieurs cartes */
+@media (min-width: 700px) {
+  .artist-card {
+    flex: 0 0 45%;
+    min-height: 260px;
+  }
+}
+@media (min-width: 1100px) {
+  .artist-card {
+    flex: 0 0 30%;
+  }
+}
+
+/* si tu veux des boutons prev/next plus tard, laisse de la place */
+.artists {
+  position: relative;
+}
+/* ...existing code... */
+.hometour-wrapper {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.hometour-title {
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+.hometour-embed {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.hometour-artisttitle {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.bit-widget-container {
+  position: relative;
+  min-height: 120px; /* placeholder height */
+}
+.bit-widget-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+}
+.hometour-load-btn {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.bitt-widget-iframe {
+  width: 100%;
+  height: 520px; /* ajuster selon rendu */
+  border: 0;
+  display: block;
+  border-radius: 8px;
+}
+/* responsive */
+@media (max-width: 700px) {
+  .bitt-widget-iframe {
+    height: 420px;
+  }
+  .hometour-artisttitle {
+    font-size: 0.95rem;
+  }
+}
+/* ...existing code... */
 h3 {
   color: #000;
   text-align: center;
