@@ -15,37 +15,33 @@ video {
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #0c0c0c;
+  color: #fff;
+  padding-top: 0;
 }
-.logo {
-  width: 104px;
-  height: 91px;
-  aspect-ratio: 8/7;
-}
+
 .site-header {
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 1rem 0;
+  background: transparent;
+  padding: 1.5rem 0;
+  border-bottom: none;
 }
 
 .header-inner {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  gap: 1rem;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -53,30 +49,45 @@ body {
 
 /* taille contrôlée pour l'image du logo */
 .logo-img {
-  width: 48px; /* ajuster la valeur selon la maquette */
-  height: auto;
+  width: 104px;
+  height: 91px;
+  aspect-ratio: 8/7;
   max-width: 100%;
   object-fit: contain;
 }
-/* ...existing code... */
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
 .main-nav ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
-  height: 32px;
+  gap: 2.5rem;
   align-items: center;
-  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .main-nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  transition: opacity 0.3s;
-  font-size: 0.9rem;
+  font-family: "PODIUM Sharp", Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
 }
 
 .main-nav a:hover {
-  opacity: 0.7;
+  color: #ccc;
 }
 
 /* Vidéo YouTube background */
@@ -103,24 +114,24 @@ body {
 }
 /* Marquee animé - PARTYNEXTDOOR */
 .marquee {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
   pointer-events: none;
   overflow: hidden;
 }
 
 .marquee--overlay {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  transform: translateY(-50%);
-  pointer-events: none;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  z-index: 10;
+  transform: none;
+  background: transparent;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -130,6 +141,7 @@ body {
   padding: 2rem 0;
   margin: 2rem 0;
   overflow: hidden;
+  display: none;
 }
 
 .marquee__inner {
@@ -145,6 +157,7 @@ body {
   font-size: clamp(2rem, 8vw, 5rem);
   font-weight: 700;
   text-transform: uppercase;
+  white-space: nowrap;
   color: #fff;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
@@ -311,4 +324,99 @@ h3 {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+/* === FOOTER === */
+footer {
+  background: #fff;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+footer nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+footer nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer a {
+  color: #000;
+  text-decoration: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+  opacity: 0.6;
+}
+
+footer p {
+  color: #000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+.footer-socials svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  footer .container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  footer nav ul {
+    justify-content: flex-start;
+  }
+
+  footer p {
+    white-space: normal;
+  }
 }

@@ -9,13 +9,14 @@
     />
     <title>Label — Autolayout demo</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
         <nav class="main-nav" aria-label="Navigation principale">
           <a class="logo" href="#" aria-label="Label Home">
-          <img src="img/OVO_Sound.svg" alt="Label Logo" class="logo-img" />
+          <img src="img/OVO_Sound-white.svg" alt="Label Logo" class="logo-img" />
         </a>
           <ul>
             <li><a href="#Artists">Artists</a></li>
@@ -29,6 +30,16 @@
       </div>
     </header>
 
+    <!-- Marquee placé entre la nav et la vidéo -->
+    <div class="marquee marquee--overlay" aria-hidden="true">
+      <div class="marquee__inner">
+        <span class="marquee__text">PARTYNEXTDOOR</span>
+        <span class="marquee__text">PARTYNEXTDOOR</span>
+        <span class="marquee__text">PARTYNEXTDOOR</span>
+        <span class="marquee__text">PARTYNEXTDOOR</span>
+      </div>
+    </div>
+
     <main>
       <!-- Hero (autolayout-like center stack) -->
         <div class="hero-visual" aria-hidden="true">
@@ -40,25 +51,6 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
             </iframe>
-            <!-- Marquee overlay: texte en mouvement continu -->
-              <div class="marquee marquee--overlay" aria-hidden="true">
-                <div class="marquee__inner">
-                  <span class="marquee__text">partynextdoor</span>
-                  <span class="marquee__text marquee__text--clone" aria-hidden="true">partynextdoor</span>
-                  <span class="marquee__text marquee__text--clone" aria-hidden="true">partynextdoor</span>
-                  <span class="marquee__text marquee__text--clone" aria-hidden="true">partynextdoor</span>
-                </div>
-              </div>
-  <!-- Marquee placé sous la vidéo, juste avant la section des artistes -->
-  <div class="marquee marquee--below" aria-hidden="true">
-    <div class="marquee__inner">
-      <span class="marquee__text">partynextdoor</span>
-      <span class="marquee__text marquee__text--clone" aria-hidden="true">partynextdoor</span>
-      <span class="marquee__text marquee__text--clone" aria-hidden="true">partynextdoor</span>
-      <span class="marquee__text marquee__text--clone" aria-hidden="true">partynextdoor</span>
-    </div>
-  </div>
-
           </div>
 <section id="artists" class="artists">
   <div class="container">
@@ -126,6 +118,23 @@
             <li><a href="#">Your california privacy rights</a></li>
             <li><a href="#">Terms & conditions</a></li>
           </ul>
+          <div class="footer-socials">
+  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X">
+    <i class="fab fa-x-twitter"></i>
+  </a>
+  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+    <i class="fab fa-facebook"></i>
+  </a>
+  <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+  <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+    <i class="fab fa-spotify"></i>
+  </a>
+</div>
           <p>© <span id="year"></span> OVO SOUND</p>
         </nav>
       </div>
