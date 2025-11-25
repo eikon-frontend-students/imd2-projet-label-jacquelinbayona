@@ -7,24 +7,31 @@
       name="description"
       content="Prototype : autolayout layout inspired by Figma"
     />
-    <title>Label — Autolayout demo</title>
+    <title>Label Musique</title>
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link <link rel="stylesheet" href="https://use.typekit.net/fnp8awa.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/fnp8awa.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
         <nav class="main-nav" aria-label="Navigation principale">
           <a class="logo" href="#" aria-label="Label Home">
-          <img src="img/OVO_Sound-white.svg" alt="Label Logo" class="logo-img" />
-        </a>
+            <img
+              src="img/OVO_Sound-white.svg"
+              alt="Label Logo"
+              class="logo-img"
+            />
+          </a>
           <ul>
             <li><a href="#Artists">Artists</a></li>
             <li><a href="#Music">Music</a></li>
             <li><a href="#Shop">Shop</a></li>
-            <li><a href="#Videos">Videos</a></li> <!-- Correction ici -->
+            <li><a href="#Videos">Videos</a></li>
+            <!-- Correction ici -->
             <li><a href="#About">About</a></li>
-            <li><a href="#Suscribe">Subscribe</a></li> <!-- Correction de l'orthographe -->
+            <li><a href="#Suscribe">Subscribe</a></li>
+            <!-- Correction de l'orthographe -->
           </ul>
         </nav>
       </div>
@@ -42,70 +49,65 @@
 
     <main>
       <!-- Hero (autolayout-like center stack) -->
-        <div class="hero-visual" aria-hidden="true">
-            <!-- Vidéo YouTube en background -->
-            <iframe
-              class="youtube-bg"
-              src="https://www.youtube.com/embed/k3BhiQ6iBvc?autoplay=1&mute=1&loop=1&playlist=k3BhiQ6iBvc&controls=0&modestbranding=1"
-              title="OVO Sound Background"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-          </div>
-<section id="artists" class="artists">
-  <div class="container">
-    <h2 class="section-title">Artistes</h2>
-    <div class="artist-carousel" aria-label="Carousel artistes">
-      <article class="artist-card" data-genre="rnb">
-        <img src="img/artistes homepage/dvsn-homepage.png" alt="DVSN" />
-        <h2>DVSN</h2>
-        <p>R&B slow-jam, soulful</p>
-      </article>
-
-      <article class="artist-card" data-genre="rnb">
-        <img src="img/artistes homepage/majid jordan-homepage.png" alt="Majid Jordan" />
-        <h2>Majid Jordan</h2>
-        <p>R&B / Alternative R&B / Synth-pop</p>
-      </article>
-
-      <article class="artist-card" data-genre="rnb">
-        <img src="img/artistes homepage/naomi-homepage.png" alt="Naomi Sharon" />
-        <h2>Naomi Sharon</h2>
-        <p>R&B / Soul</p>
-      </article>
-
-      <article class="artist-card" data-genre="rnb">
-        <img src="img/artistes homepage/roy-homepage.png" alt="Roy Woods" />
-        <h2>Roy Woods</h2>
-        <p>R&B / Soul</p>
-      </article>
-    </div>
-  </div>
-   <div class="About"><p>
-        OVO SOUND IS A MUSIC LABEL ESTABLISHED BY AUBREY DRAKE GRAHAM AND LONG-STANDING Buddies and Associates NOAH “40” SHEBIBAND OLIVER EL-KHATIB.
-      </p></div>
-
-<section class="hometour-wrapper">
-  <h3 class="hometour-title">Next dates</h3>
-
-  <div class="hometour-embed" data-artist="Naomi Sharon">
-    <div class="hometour-artisttitle">NAOMI SHARON</div>
-
-    <!-- placeholder / loader + button pour charger l'iframe (lazy) -->
-    <div class="bit-widget-container" aria-label="Widgets dates Naomi Sharon">
-      <div class="bit-widget-placeholder">
-        <button class="hometour-load-btn" data-src="https://widget.bandsintown.com/widget_iframe.html?affil_code=js_www.ovosound.com&app_id=js_www.ovosound.com&artist_id=15515831&artist_name=Naomi%20Sharon&came_from_code=242">
-          Charger les dates
-        </button>
-        <noscript>
-          <iframe src="https://widget.bandsintown.com/widget_iframe.html?affil_code=js_www.ovosound.com&app_id=js_www.ovosound.com&artist_id=15515831&artist_name=Naomi%20Sharon&came_from_code=242"
-                  class="bitt-widget-iframe" loading="lazy" title="Naomi Sharon tour dates"></iframe>
-        </noscript>
+      <div class="hero-visual" aria-hidden="true">
+        <!-- Vidéo YouTube en background -->
+        <iframe
+          class="youtube-bg"
+          src="https://www.youtube.com/embed/k3BhiQ6iBvc?autoplay=1&mute=1&loop=1&playlist=k3BhiQ6iBvc&controls=0&modestbranding=1"
+          title="OVO Sound Background"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
       </div>
-    </div>
-  </div>
 
-  <!-- Répète .hometour-embed pour DVSN, PARTYNEXTDOOR, etc., en adaptant data-src / artist_id -->
+      <section id="artists" class="artists">
+        <div class="container">
+          <h2 class="section-title">Artistes</h2>
+          <div class="artist-carousel" aria-label="Carousel artistes">
+            <article class="artist-card" data-genre="rnb">
+              <img src="img/artistes homepage/dvsn-homepage.png" alt="DVSN" />
+              <h2>DVSN</h2>
+              <p>R&B slow-jam, soulful</p>
+            </article>
+
+            <article class="artist-card" data-genre="rnb">
+              <img
+                src="img/artistes homepage/majid jordan-homepage.png"
+                alt="Majid Jordan"
+              />
+              <h2>Majid Jordan</h2>
+              <p>R&B / Alternative R&B / Synth-pop</p>
+            </article>
+
+            <article class="artist-card" data-genre="rnb">
+              <img
+                src="img/artistes homepage/naomi-homepage.png"
+                alt="Naomi Sharon"
+              />
+              <h2>Naomi Sharon</h2>
+              <p>R&B / Soul</p>
+            </article>
+
+            <article class="artist-card" data-genre="rnb">
+              <img
+                src="img/artistes homepage/roy-homepage.png"
+                alt="Roy Woods"
+              />
+              <h2>Roy Woods</h2>
+              <p>R&B / Soul</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1>
+          OVO SOUND IS A MUSIC LABEL ESTABLISHED BY AUBREY DRAKE GRAHAM AND
+          LONG-STANDING Buddies and Associates NOAH “40” SHEBIBAND OLIVER
+          EL-KHATIB.
+        </h1>
+      </section>
+    </main>
 
     <footer id="contact" class="site-footer">
       <div class="container footer-inner">
@@ -119,22 +121,47 @@
             <li><a href="#">Terms & conditions</a></li>
           </ul>
           <div class="footer-socials">
-  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X">
-    <i class="fab fa-x-twitter"></i>
-  </a>
-  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-    <i class="fab fa-facebook"></i>
-  </a>
-  <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-    <i class="fab fa-youtube"></i>
-  </a>
-  <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
-    <i class="fab fa-spotify"></i>
-  </a>
-</div>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X"
+            >
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a
+              href="https://spotify.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Spotify"
+            >
+              <i class="fab fa-spotify"></i>
+            </a>
+          </div>
           <p>© <span id="year"></span> OVO SOUND</p>
         </nav>
       </div>

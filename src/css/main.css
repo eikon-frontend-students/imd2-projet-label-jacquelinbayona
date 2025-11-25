@@ -13,7 +13,6 @@ video {
   display: block;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   background-color: #0c0c0c;
   color: #fff;
@@ -78,7 +77,7 @@ body {
 .main-nav a {
   color: #fff;
   text-decoration: none;
-  font-family: "PODIUM Sharp", Arial, sans-serif;
+  font-family: "PODIUM Sharp";
   font-size: 21px;
   font-weight: 700;
   text-transform: uppercase;
@@ -141,7 +140,7 @@ body {
   padding: 2rem 0;
   margin: 2rem 0;
   overflow: hidden;
-  display: none;
+  align-self: stretch;
 }
 
 .marquee__inner {
@@ -208,124 +207,111 @@ body {
   scrollbar-width: none;
 }
 
-/* Chaque carte s'aligne au centre lors du snap */
+/* === ARTIST CARD (version propre et optimisée) === */
+
+/* === ARTIST CARD (texte aligné à gauche) === */
 .artist-card {
-  flex: 0 0 80%; /* largeur visible sur petits écrans */
+  flex: 0 0 80%;
   scroll-snap-align: center;
-  background: #fff;
-  padding: 1rem;
-  min-height: 220px;
-  display: flex;
-  width: 448px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.75rem;
+  background: transparent;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
-/* image inside card */
-.artist-card img {
+/* NOM ARTISTE — barre blanche alignée à gauche */
+.artist-card h2 {
+  position: absolute;
+  top: 0;
   width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-/* titres */
-.artist-card h3 {
-  font-size: 1.1rem;
-  margin-top: 0.25rem;
-}
-.artist-card p {
-  font-size: 0.9rem;
-  color: #666;
+  height: 56px;
   margin: 0;
+  padding: 12px 16px;
+  background: #fff;
+  color: #000;
+
+  display: flex;
+  justify-content: flex-start; /* alignement à gauche */
+  align-items: center;
+  text-align: left;
+
+  font-family: "PODIUM Sharp", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  z-index: 10;
 }
 
-/* Desktop: montrer plusieurs cartes */
+/* IMAGE — responsive */
+.artist-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 56px; /* espace pour la top bar */
+  object-fit: cover;
+}
+
+/* GENRE — badge blanc aligné à gauche */
+.artist-card p {
+  background: #fff;
+  color: #000;
+  height: 50px;
+
+  display: flex;
+  justify-content: flex-start; /* alignement à gauche */
+  align-items: center;
+  padding-left: 15px; /* garde le padding pour ne pas coller au bord */
+  text-align: left;
+
+  font-family: "PODIUM Sharp";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  text-transform: uppercase;
+}
+
+/* Supprimer texte parasite */
+.artist-card :not(h2):not(img):not(p) {
+  display: none !important;
+}
+
+/* Hover desktop */
+.artist-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive desktop */
 @media (min-width: 700px) {
   .artist-card {
     flex: 0 0 45%;
-    min-height: 260px;
   }
 }
+
 @media (min-width: 1100px) {
   .artist-card {
     flex: 0 0 30%;
   }
-}
 
-/* si tu veux des boutons prev/next plus tard, laisse de la place */
-.artists {
-  position: relative;
-}
-/* ...existing code... */
-.hometour-wrapper {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-.hometour-title {
-  font-size: 1.25rem;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
-}
-.hometour-embed {
-  background: #0a0a0a;
-  color: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-.hometour-artisttitle {
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-}
-.bit-widget-container {
-  position: relative;
-  min-height: 120px; /* placeholder height */
-}
-.bit-widget-placeholder {
+h1 {
   display: flex;
-  align-items: center;
+  height: 750px;
+  padding: 100px 120px;
   justify-content: center;
-  height: 220px;
-}
-.hometour-load-btn {
-  background: #fff;
-  color: #000;
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-}
-.bitt-widget-iframe {
-  width: 100%;
-  height: 520px; /* ajuster selon rendu */
-  border: 0;
-  display: block;
-  border-radius: 8px;
-}
-/* responsive */
-@media (max-width: 700px) {
-  .bitt-widget-iframe {
-    height: 420px;
-  }
-  .hometour-artisttitle {
-    font-size: 0.95rem;
-  }
-}
-/* ...existing code... */
-h3 {
-  color: #000;
-  text-align: center;
-  font-family: "PODIUM Sharp";
-  font-size: 36px;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  align-self: stretch;
+  color: var(--white-100, #fff);
+  text-align: justify;
+  font-family: "Helvetica Neue";
+  font-size: 64px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 65px; /* 101.563% */
+  letter-spacing: 5.12px;
+  text-transform: uppercase;
 }
-
 /* === FOOTER === */
 footer {
   background: #fff;
