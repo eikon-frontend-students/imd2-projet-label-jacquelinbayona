@@ -8,3 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 export {};
+window.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector(".playlist-btn");
+  setTimeout(() => {
+    btn.classList.add("show");
+  }, 2000); // bouton apparaît après 2 secondes
+});

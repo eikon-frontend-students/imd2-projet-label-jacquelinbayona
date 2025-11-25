@@ -17,8 +17,53 @@ body {
   background-color: #0c0c0c;
   color: #fff;
   padding-top: 0;
+  font-family: PODIUM SHARP, sans-serif;
+}
+h1 {
+  display: flex;
+  height: 750px;
+  padding: 100px 120px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  align-self: stretch;
+  color: var(--white-100, #fff);
+  text-align: justify;
+  font-family: "Helvetica Neue";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 65px; /* 101.563% */
+  letter-spacing: 5.12px;
+  text-transform: uppercase;
+}
+.bg-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.2; /* pour que le texte reste lisible */
+  width: 200px; /* ou ce que tu veux */
+  pointer-events: none; /* pour que ça n’interfère pas avec le texte */
 }
 
+h3 {
+  color: var(--white-100, #fff);
+  text-align: center;
+  font-family: "PODIUM Sharp";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.32px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
 .site-header {
   top: 0;
   left: 0;
@@ -132,6 +177,31 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.playlist-btn {
+  position: absolute;
+  bottom: 20%; /* ajuste la position sur la vidéo */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  background-color: #fff;
+  color: #000;
+  font-family: "PODIUM Sharp", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 25px;
+  cursor: pointer;
+  opacity: 0; /* invisible au départ */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  z-index: 5;
+}
+
+.playlist-btn.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .marquee--below {
@@ -292,26 +362,23 @@ body {
   .artist-card {
     flex: 0 0 30%;
   }
-
-h1 {
-  display: flex;
-  height: 750px;
-  padding: 100px 120px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-  align-self: stretch;
-  color: var(--white-100, #fff);
-  text-align: justify;
-  font-family: "Helvetica Neue";
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 65px; /* 101.563% */
-  letter-spacing: 5.12px;
-  text-transform: uppercase;
 }
+.next-dates {
+  padding: 4rem 1rem;
+  background-color: #0c0c0c;
+  color: #fff;
+  font-family: "PODIUM Sharp", Arial, sans-serif;
+}
+
+.next-dates .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
 /* === FOOTER === */
 footer {
   background: #fff;
