@@ -132,7 +132,6 @@ h3 {
 .main-nav a {
   color: #fff;
   text-decoration: none;
-  font-family: "podium-soft", sans-serif;
   font-size: 21px;
   font-weight: 700;
   text-transform: uppercase;
@@ -148,7 +147,7 @@ h3 {
 .hero-visual {
   position: relative;
   width: 100%;
-  height: 875px; /* entre 850 et 900px, tu peux ajuster */
+  height: 750px; /* entre 850 et 900px, tu peux ajuster */
   overflow: hidden;
 }
 
@@ -157,8 +156,8 @@ h3 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 850px;
-  max-height: 850px;
+  height: 550px;
+  max-height: 550px;
   border: none;
   pointer-events: none;
   object-fit: cover; /* remplit le conteneur sans dépasser */
@@ -175,9 +174,10 @@ h3 {
   pointer-events: none;
   overflow: hidden;
 }
+
 .marquee--bottom {
   position: absolute;
-  bottom: 10px; /* légèrement au-dessus du bas */
+  bottom: 1px; /* légèrement au-dessus du bas */
   width: 100%;
   z-index: 900;
   overflow: hidden;
@@ -322,6 +322,8 @@ h3 {
   position: relative;
   overflow: hidden;
   transition: transform 220ms ease, box-shadow 220ms ease;
+  height: 696px;
+  overflow: hidden;
 }
 
 /* NOM ARTISTE — barre blanche alignée à gauche */
