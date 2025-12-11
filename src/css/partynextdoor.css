@@ -1,0 +1,264 @@
+/* Hero avec image de fond */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+video {
+  display: block;
+}
+body {
+  line-height: 1.6;
+  background-color: #0c0c0c;
+  padding-top: 0;
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+}
+.site-header {
+  position: relative;
+  z-index: 1000; /* toujours au-dessus de la vidéo */
+}
+.site-header {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  padding: 0 0;
+  border-bottom: none;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* taille contrôlée pour l'image du logo */
+.logo-img {
+  width: 104px;
+  height: 91px;
+  aspect-ratio: 8/7;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #ccc;
+}
+
+.hero {
+  position: relative; /* important pour overlay des icônes */
+  background-image: url("../img/PARTYNEXTDOOR.webp"); /* chemin vers ton image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* pleine hauteur */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centrer verticalement */
+  align-items: flex-start; /* titre en haut à gauche si tu veux */
+  padding: 100px 120px; /* même padding que ton H1 global */
+  color: #fff;
+}
+
+/* Icônes réseaux sociaux sur le hero */
+.socials-hero {
+  position: absolute;
+  bottom: 40px; /* distance depuis le bas */
+  left: 120px; /* même alignement que le texte */
+  display: flex;
+  gap: 20px; /* espace entre les icônes */
+}
+
+.socials-hero a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.socials-hero a:hover {
+  transform: scale(1.2);
+}
+.marquee--below.marquee-single {
+  position: relative;
+  background: #fff; /* fond blanc */
+  padding: 2rem 0;
+  margin: 2rem 0;
+  overflow: hidden;
+  align-self: stretch;
+}
+
+.marquee--below.marquee-single .marquee__text {
+  color: #000; /* texte noir */
+  -webkit-text-stroke: 0.3px #000; /* stroke fin noir */
+  text-shadow: none; /* enlever l'ombre si nécessaire */
+}
+
+/* Pour une seule occurrence, on peut garder la même animation ou juste un défilement léger */
+.marquee--below.marquee-single .marquee__inner {
+  display: flex;
+  justify-content: flex-start; /* texte aligné à gauche */
+  animation: marquee-scroll-single 18s linear infinite;
+}
+
+@keyframes marquee-scroll-single {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .marquee--below.marquee-single .marquee__inner {
+    animation: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .marquee--below.marquee-single .marquee__text {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+  }
+}
+/* === FOOTER === */
+footer {
+  background: #fff;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+footer nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+footer nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer a {
+  color: #000;
+  text-decoration: none;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+  opacity: 0.6;
+}
+
+footer p {
+  color: #000;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+.footer-socials svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  footer .container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  footer nav ul {
+    justify-content: flex-start;
+  }
+
+  footer p {
+    white-space: normal;
+  }
+}
