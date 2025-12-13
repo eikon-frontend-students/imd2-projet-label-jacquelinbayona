@@ -17,7 +17,7 @@ body {
   background-color: #0c0c0c;
   color: #fff;
   padding-top: 0;
-  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
 }
 
 h1 {
@@ -322,7 +322,6 @@ h3 {
   position: relative;
   overflow: hidden;
   transition: transform 220ms ease, box-shadow 220ms ease;
-  height: 696px;
   overflow: hidden;
 }
 
@@ -336,23 +335,19 @@ h3 {
   padding: 12px 16px;
   background: #fff;
   color: #000;
-
   display: flex;
   justify-content: flex-start; /* alignement à gauche */
   align-items: center;
   text-align: left;
-  font-family: "podium-soft", sans-serif;
   font-size: 24px;
   font-weight: 700;
   z-index: 10;
 }
 
-/* IMAGE — responsive */
 .artist-card img {
-  display: block;
   width: 100%;
   height: auto;
-  margin-top: 56px; /* espace pour la top bar */
+  margin-top: 56px;
   object-fit: cover;
 }
 
@@ -361,13 +356,11 @@ h3 {
   background: #fff;
   color: #000;
   height: 50px;
-
   display: flex;
   justify-content: flex-start; /* alignement à gauche */
   align-items: center;
   padding-left: 15px; /* garde le padding pour ne pas coller au bord */
   text-align: left;
-  font-family: "podium-soft", sans-serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.16px;
@@ -400,6 +393,7 @@ h3 {
     flex: 0 0 30%;
   }
 }
+
 .next-dates {
   padding: 4rem 1rem;
   background-color: #0c0c0c;
@@ -436,38 +430,60 @@ h3 {
   padding: 100px 120px;
 }
 
-/* === FOOTER === */
-footer {
+/* Footer */
+.site-footer {
   background: #fff;
   padding: 2rem 0;
   margin-top: 3rem;
 }
 
-footer .container {
+.footer-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+  align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-footer nav ul {
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.brand-name {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.brand-year {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 0.875rem;
+  color: #000;
+}
+
+nav ul {
   display: flex;
   list-style: none;
   gap: 2rem;
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem; /* Ajustez cette valeur pour aligner verticalement avec "2025" */
 }
 
-footer nav li {
+nav li {
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
-footer a {
+nav a {
   color: #000;
   text-decoration: none;
   font-family: "Helvetica Neue", sans-serif;
@@ -476,32 +492,20 @@ footer a {
   transition: opacity 0.3s ease;
 }
 
-footer a:hover {
+nav a:hover {
   opacity: 0.6;
-}
-
-footer p {
-  color: #000;
-  font-family: "Helvetica Neue", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 400;
-  margin: 0;
-  white-space: nowrap;
 }
 
 .footer-socials {
   display: flex;
-  gap: 1.5rem;
-  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+  margin-bottom: 0.5rem; /* Ajustez cette valeur pour aligner verticalement avec "2025" */
 }
 
 .footer-socials a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
   color: #000;
+  font-size: 1.2rem;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -510,23 +514,14 @@ footer p {
   transform: scale(1.1);
 }
 
-.footer-socials svg {
-  width: 20px;
-  height: 20px;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
-  footer .container {
+  .footer-inner {
     flex-direction: column;
     gap: 1.5rem;
   }
 
-  footer nav ul {
+  nav ul {
     justify-content: flex-start;
-  }
-
-  footer p {
-    white-space: normal;
   }
 }

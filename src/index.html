@@ -9,6 +9,10 @@
     />
     <title>OVO Label Musique</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
     <header class="site-header">
@@ -187,6 +191,11 @@
 
     <footer id="contact" class="site-footer">
       <div class="container footer-inner">
+        <div class="footer-brand">
+          <div class="brand-name">OVO SOUND</div>
+          <div class="brand-year">© 2025</div>
+        </div>
+
         <nav aria-label="Liens de pied de page">
           <ul>
             <li><a href="#">Send us feedback</a></li>
@@ -196,52 +205,53 @@
             <li><a href="#">Your california privacy rights</a></li>
             <li><a href="#">Terms & conditions</a></li>
           </ul>
-          <div class="footer-socials">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="X"
-            >
-              <i class="fab fa-x-twitter"></i>
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-            >
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a
-              href="https://spotify.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Spotify"
-            >
-              <i class="fab fa-spotify"></i>
-            </a>
-          </div>
-          <p>© <span id="year"></span> OVO SOUND</p>
         </nav>
+
+        <div class="footer-socials">
+          <a
+            href="https://www.instagram.com/ovosound/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://x.com/OVOSound"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X"
+          >
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/ovosound/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UC3rQdmWlTWyk_dGRHuV0_GA"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a
+            href="https://open.spotify.com/playlist/0GsvYNj45QjR245EWqgfDs"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Spotify"
+          >
+            <i class="fab fa-spotify"></i>
+          </a>
+        </div>
       </div>
     </footer>
+
     <script>
       // Petit script d'initialisation non intrusif
       document.getElementById("year").textContent = new Date().getFullYear();
