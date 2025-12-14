@@ -215,9 +215,9 @@ h3 {
   transform: auto;
   z-index: 10;
   padding: 1rem 2rem;
-  background-color: #fff;
-  color: #000;
-  font-family: "podium-soft", sans-serif;
+  color: #ffffff;
+  border: 0.688px solid rgba(255, 255, 255, 0.42);
+  box-shadow: 0 2.753px 6.057px 0 rgba(255, 255, 255, 0.35);
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
@@ -429,12 +429,46 @@ h3 {
 .next-dates {
   padding: 100px 120px;
 }
+.next-dates-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
 
+/* Next Dates Button */
+.next-dates-btn {
+  display: flex;
+  height: 55.068px;
+  padding: 22.27px 38.547px 19.274px 38.547px;
+  justify-content: center;
+  align-items: center;
+  gap: 6.883px;
+
+  background: #fff;
+  border-radius: 34.417px;
+  border: 0.688px solid rgba(255, 255, 255, 0.42);
+  box-shadow: 0 2.753px 6.057px 0 rgba(255, 255, 255, 0.35);
+
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Global button hover */
+button:hover,
+.next-dates-btn:hover,
+.playlist-btn:hover {
+  background-color: #f57496;
+  border-color: #f57496;
+  color: #000;
+}
 /* Footer */
 .site-footer {
   background: #fff;
   padding: 2rem 0;
-  margin-top: 3rem;
+  margin-top: 150px;
 }
 
 .footer-inner {
