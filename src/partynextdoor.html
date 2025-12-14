@@ -1,35 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PartyNextDoor - OVO Label</title>
     <link rel="stylesheet" href="css/partynextdoor.css" />
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <nav class="main-nav" aria-label="Navigation principale">
-          <a class="logo" href="index.html" aria-label="Label Home">
-            <img
-              src="img/OVO_Sound-white.svg"
-              alt="Label Logo"
-              class="logo-img"
-            />
-          </a>
-          <ul>
-            <li><a href="#Artists">Artists</a></li>
-            <li><a href="#Music">Music</a></li>
-            <li><a href="#Shop">Shop</a></li>
-            <li><a href="#Videos">Videos</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Suscribe">Subscribe</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <!-- MAIN CONTENT -->
+    <include src="./components/header.html"></include>
+ <!-- MAIN CONTENT -->
     <main class="artist-page">
       <div class="container hero" id="party-hero">
         <h1>PartyNextDoor</h1>
@@ -218,63 +201,7 @@
           PARTYNEXTDOOR Canadian singer, songwriter, and producer pioneer of alternative R&B and the OVO Sound aesthetic.
     </main>
 
-    <footer id="contact" class="site-footer">
-      <div class="container footer-inner">
-        <nav aria-label="Liens de pied de page">
-          <ul>
-            <li><a href="#">Send us feedback</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">How we use your data</a></li>
-            <li><a href="#">Do not sell my personal information</a></li>
-            <li><a href="#">Your california privacy rights</a></li>
-            <li><a href="#">Terms & conditions</a></li>
-          </ul>
-          <div class="footer-socials">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="X"
-            >
-              <i class="fab fa-x-twitter"></i>
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-            >
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a
-              href="https://spotify.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Spotify"
-            >
-              <i class="fab fa-spotify"></i>
-            </a>
-          </div>
-          <p>© <span id="year"></span> OVO SOUND</p>
-        </nav>
-      </div>
-    </footer>
+    <include src="./components/footer.html"></include>
     <script>
       // Petit script d'initialisation non intrusif
       document.getElementById("year").textContent = new Date().getFullYear();

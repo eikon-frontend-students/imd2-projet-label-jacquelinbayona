@@ -31,7 +31,6 @@ h1 {
   align-self: stretch;
   color: var(--white-100, #fff);
   text-align: justify;
-  font-family: "Helvetica Neue";
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
@@ -52,7 +51,6 @@ h1 {
 h3 {
   color: var(--white-100, #fff);
   text-align: center;
-  font-family: "podium-soft", sans-serif;
   font-variation-settings: "wdth" 100;
   font-size: 32px;
   font-style: normal;
@@ -398,7 +396,6 @@ h3 {
   padding: 4rem 1rem;
   background-color: #0c0c0c;
   color: #fff;
-  font-family: "podium-soft", sans-serif;
 }
 
 .next-dates .section-title {
