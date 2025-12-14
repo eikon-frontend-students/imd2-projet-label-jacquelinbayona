@@ -44,7 +44,9 @@ h1 span {
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
+h2 {
+  text-transform: uppercase;
+}
 h3 {
   color: var(--white-100, #fff);
   text-align: center;
