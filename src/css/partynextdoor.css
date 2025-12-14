@@ -20,8 +20,25 @@ body {
   padding-top: 0;
   font-family: "Neue Haas Grotesk Display Pro", sans-serif;
 }
+h1 {
+  position: absolute;
+  left: 110px;
+  bottom: 85px;
+  color: var(--white-100, #fff);
+  font-family: "Helvetica Neue";
+  font-size: 108px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
 h2 {
-  text-align: center;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 15px;
 }
 .site-header {
   position: relative;
@@ -95,10 +112,14 @@ h2 {
 .main-nav a:hover {
   color: #ccc;
 }
-
+h1 {
+  position: absolute;
+  left: 110px;
+  bottom: 85px;
+}
 .hero {
   position: relative; /* important pour overlay des icônes */
-  background-image: url("../img/PARTYNEXTDOOR.webp"); /* chemin vers ton image */
+  background-image: url("../img/PARTYNEXTDOOR\ copie.jpg"); /* chemin vers ton image */
   background-size: cover;
   background-position: center;
   height: 100vh; /* pleine hauteur */
@@ -108,15 +129,6 @@ h2 {
   align-items: flex-start; /* titre en haut à gauche si tu veux */
   padding: 100px 120px; /* même padding que ton H1 global */
   color: #fff;
-}
-
-/* Icônes réseaux sociaux sur le hero */
-.socials-hero {
-  position: absolute;
-  bottom: 40px; /* distance depuis le bas */
-  left: 120px; /* même alignement que le texte */
-  display: flex;
-  gap: 20px; /* espace entre les icônes */
 }
 
 .socials-hero a {
@@ -132,7 +144,6 @@ h2 {
   position: relative;
   background: #fff; /* fond blanc */
   padding: 2rem 0;
-  margin: 2rem 0;
   overflow: hidden;
   align-self: stretch;
 }
@@ -172,12 +183,156 @@ h2 {
     font-size: clamp(1.5rem, 6vw, 3rem);
   }
 }
+
+/* Titre "Latest Release" centré */
+.latest-release-title {
+  text-align: center;
+  color: #fff;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  margin: 50px 0 30px 0;
+  text-transform: uppercase;
+}
+
+/* Conteneur principal */
+.latest-release {
+  padding: 0 100px 50px 100px;
+  background-color: #0c0c0c;
+  color: #fff;
+}
+
+/* Carte de la release (image + texte) */
+.release-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+/* Style de l'image */
+.release-image {
+  width: 500px;
+  height: 500px;
+  flex-shrink: 0;
+}
+
+.release-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Style du texte */
+.release-info {
+  flex: 1; /* Prend tout l'espace restant */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.release-info h4 {
+  color: #fff;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: left;
+  margin: 0;
+}
+
+.latest-release-text p {
+  color: #fff;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0;
+}
+
+/* Bouton "Listen Now" */
+.btn-primary {
+  display: inline-flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 25px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #ccc;
+  transform: scale(1.05);
+}
+
+/* Responsive : sur mobile, image au-dessus du texte */
+@media (max-width: 768px) {
+  .latest-release-title {
+    font-size: 32px;
+    margin: 30px 0 20px 0;
+  }
+
+  .latest-release {
+    padding: 0 20px 30px 20px;
+  }
+
+  .release-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .release-image {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
 .discography-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-top: 2rem;
   padding: 120px 100px 0 100px;
+}
+
+/* Layout for discography filter buttons container */
+.discography-filters {
+  display: flex;
+  align-items: flex-start;
+  gap: 70px;
+}
+
+/* Discography filter buttons */
+.discography-filters button,
+.discography-filters a {
+  display: flex;
+  height: 55.068px;
+  padding: 22.27px 38.547px 19.274px 38.547px;
+  justify-content: center;
+  align-items: center;
+  gap: 6.883px;
+
+  border-radius: 34.417px;
+  border: 0.688px solid rgba(255, 255, 255, 0.42);
+  background: var(--black-100, #000);
+  box-shadow: 0 2.753px 6.057px 0 rgba(255, 255, 255, 0.35);
+
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .discography-item {
@@ -205,38 +360,69 @@ h2 {
 .discography-item-large {
   grid-column: span 2; /* prend 2 colonnes */
 }
-/* === FOOTER === */
-footer {
-  background: #fff;
-  padding: 2rem 0;
-  margin-top: 3rem;
+p {
+  color: var(--white-100, #fff);
+  text-align: justify;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
-footer .container {
+/* === FOOTER === */
+.site-footer {
+  background: #fff;
+  padding: 2rem 0;
+  margin-top: 150px;
+}
+
+.footer-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+  align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-footer nav ul {
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.brand-name {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.brand-year {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 0.875rem;
+  color: #000;
+}
+
+nav ul {
   display: flex;
   list-style: none;
   gap: 2rem;
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem; /* Ajustez cette valeur pour aligner verticalement avec "2025" */
 }
 
-footer nav li {
+nav li {
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
-footer a {
+nav a {
   color: #000;
   text-decoration: none;
   font-family: "Helvetica Neue", sans-serif;
@@ -245,32 +431,20 @@ footer a {
   transition: opacity 0.3s ease;
 }
 
-footer a:hover {
+nav a:hover {
   opacity: 0.6;
-}
-
-footer p {
-  color: #000;
-  font-family: "Helvetica Neue", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 400;
-  margin: 0;
-  white-space: nowrap;
 }
 
 .footer-socials {
   display: flex;
-  gap: 1.5rem;
-  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+  margin-bottom: 0.5rem; /* Ajustez cette valeur pour aligner verticalement avec "2025" */
 }
 
 .footer-socials a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
   color: #000;
+  font-size: 1.2rem;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -279,23 +453,14 @@ footer p {
   transform: scale(1.1);
 }
 
-.footer-socials svg {
-  width: 20px;
-  height: 20px;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
-  footer .container {
+  .footer-inner {
     flex-direction: column;
     gap: 1.5rem;
   }
 
-  footer nav ul {
+  nav ul {
     justify-content: flex-start;
-  }
-
-  footer p {
-    white-space: normal;
   }
 }

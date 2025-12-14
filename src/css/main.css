@@ -38,14 +38,11 @@ h1 {
   letter-spacing: 5.12px;
   text-transform: uppercase;
 }
-.bg-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.2; /* pour que le texte reste lisible */
-  width: 200px; /* ou ce que tu veux */
-  pointer-events: none; /* pour que ça n’interfère pas avec le texte */
+h1 span {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 h3 {
@@ -150,7 +147,7 @@ h3 {
 }
 
 .youtube-bg {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -171,6 +168,10 @@ h3 {
   align-items: center;
   pointer-events: none;
   overflow: hidden;
+  pointer-events: auto; /* assure que le clic fonctionne */
+  position: relative; /* nécessaire pour le z-index */
+  z-index: 20; /* plus haut que la vidéo de fond */
+  cursor: pointer;
 }
 
 .marquee--bottom {
@@ -452,7 +453,17 @@ h3 {
   font-weight: 700;
   text-decoration: none;
 }
-
+.next-dates h2 {
+  text-align: center;
+}
+.next-dates h4 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
 /* Global button hover */
 button:hover,
 .next-dates-btn:hover,
